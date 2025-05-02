@@ -3,13 +3,12 @@ on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps:
-      - name: navigate
-        uses: shell
+    steps
+      - uses: actions/checkout@v3
       - shell: bash
         name: Create exe and add exe to PATH
-        run:  |
-          cd 02\ Starting\ Project/ 
+        run: |
+            cd ~
       - name: Get code
         uses: actions/checkout@v3
       - name: Install NodeJS
